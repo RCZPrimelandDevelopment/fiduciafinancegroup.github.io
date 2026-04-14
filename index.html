@@ -1,393 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Fiducia Finance Group</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Fiducia Finance Group</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <!-- HEADER -->
-<header id="site-header">
-  <div class="container header-inner">
-    <div class="logo">
-      <span class="logo-icon">✦</span>
-      <span class="logo-text">Fiducia <em>Finance</em> Group</span>
+<header>
+    <div class="container">
+        <h1>Fiducia Finance Group</h1>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#services">Services</a>
+            <a href="#team">Team</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </div>
-    <nav class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#team">Team</a>
-      <a href="#contact" class="nav-cta">Work With Us</a>
-    </nav>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="mobile-menu" id="mobile-menu">
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#team">Team</a>
-    <a href="#contact">Work With Us</a>
-  </div>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hero-bg-grid"></div>
-  <div class="container hero-inner">
-    <div class="hero-label reveal">Finance & Analysis Consultancy</div>
-    <h1 class="hero-title reveal">
-      Your Numbers,<br /><em>Transformed</em> Into<br />Strategy.
-    </h1>
-    <p class="hero-sub reveal">
-      We handle dashboards, cash flow, forecasting, and financial analysis —
-      so you can focus entirely on scaling your business.
-    </p>
-    <div class="hero-actions reveal">
-      <a href="#contact" class="btn btn-primary">Start a Conversation</a>
-      <a href="#services" class="btn btn-ghost">Explore Services ↓</a>
+    <div class="container">
+        <h2>Trusted Financial Expertise for Ecommerce & Business Growth</h2>
+        <p>We handle your dashboards, cash flow reports, forecasting, analysis and more — so you can focus on scaling your business.</p>
+        <a href="#services" class="btn">Explore Services</a>
     </div>
-
-    <div class="hero-stats reveal">
-      <div class="stat">
-        <span class="stat-num" data-target="8">0</span><span class="stat-suffix">+</span>
-        <p>Core Services</p>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span>
-        <p>Data Accuracy Focus</p>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num" data-target="4">0</span><span class="stat-suffix"></span>
-        <p>Expert Professionals</p>
-      </div>
-    </div>
-  </div>
-  <div class="hero-scroll-hint">scroll</div>
 </section>
 
 <!-- SERVICES -->
 <section class="services" id="services">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-label">What We Do</span>
-      <h2>Premium Finance Solutions for<br /><em>Ecommerce & Corporate Growth</em></h2>
+    <div class="container">
+        <h3>Our Financial Services</h3>
+        <p class="subtext">Premium finance solutions for ecommerce and corporate businesses</p>
+
+        <div class="service-grid">
+
+            <div class="service-card" style="background-image:url('images/dashboard.jpg')">
+                <div class="overlay">
+                    <h4>Financial Dashboards</h4>
+                    <p>Real-time KPI tracking</p>
+                </div>
+            </div>
+
+            <div class="service-card" style="background-image:url('images/model.png')">
+                <div class="overlay">
+                    <h4>3 Financial Statements</h4>
+                    <p>Income, Balance Sheet, Cash Flow</p>
+                </div>
+            </div>
+
+            <div class="service-card" style="background-image:url('images/modeling.jpg')">
+                <div class="overlay">
+                    <h4>Financial Modeling</h4>
+                    <p>Business forecasting models</p>
+                </div>
+            </div>
+
+            <div class="service-card" style="background-image:url('images/forecast.jpg')">
+                <div class="overlay">
+                    <h4>Budgeting & Forecasting</h4>
+                    <p>Plan future financial growth</p>
+                </div>
+            </div>
+
+            <div class="service-card" style="background-image:url('images/cashflow.jpeg')">
+                <div class="overlay">
+                    <h4>Cash Flow Reports</h4>
+                    <p>Liquidity monitoring systems</p>
+                </div>
+            </div>
+
+            <div class="service-card" style="background-image:url('images/profit.jpg')">
+                <div class="overlay">
+                    <h4>Profit & Loss</h4>
+                    <p>Daily to yearly reporting</p>
+                </div>
+            </div>
+
+            <div class="service-card" style="background-image:url('images/analysis.jpg')">
+                <div class="overlay">
+                    <h4>Financial Analysis</h4>
+                    <p>Deep business insights</p>
+                </div>
+            </div>
+
+            <div class="service-card" style="background-image:url('images/cleanup.webp')">
+                <div class="overlay">
+                    <h4>Data Cleanup</h4>
+                    <p>Fix & structure financial data</p>
+                </div>
+            </div>
+
+        </div>
     </div>
-
-    <div class="service-grid">
-
-      <div class="service-card reveal" style="--delay:0s">
-        <div class="service-card-inner" style="background-image:url('images/dashboard.jpg')">
-          <div class="service-overlay">
-            <div class="service-icon">📊</div>
-            <h4>Financial Dashboards</h4>
-            <p>Real-time KPI tracking built for clarity and fast decisions.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-card reveal" style="--delay:0.05s">
-        <div class="service-card-inner" style="background-image:url('images/model.png')">
-          <div class="service-overlay">
-            <div class="service-icon">📑</div>
-            <h4>3 Financial Statements</h4>
-            <p>Income Statement, Balance Sheet, and Cash Flow — complete and precise.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-card reveal" style="--delay:0.1s">
-        <div class="service-card-inner" style="background-image:url('images/modeling.jpg')">
-          <div class="service-overlay">
-            <div class="service-icon">🏗️</div>
-            <h4>Financial Modeling</h4>
-            <p>Business forecasting models that give you a clear view of tomorrow.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-card reveal" style="--delay:0.15s">
-        <div class="service-card-inner" style="background-image:url('images/forecast.jpg')">
-          <div class="service-overlay">
-            <div class="service-icon">📈</div>
-            <h4>Budgeting & Forecasting</h4>
-            <p>Plan future financial growth with precision and confidence.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-card reveal" style="--delay:0.2s">
-        <div class="service-card-inner" style="background-image:url('images/cashflow.jpeg')">
-          <div class="service-overlay">
-            <div class="service-icon">💧</div>
-            <h4>Cash Flow Reports</h4>
-            <p>Liquidity monitoring systems so you always know your position.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-card reveal" style="--delay:0.25s">
-        <div class="service-card-inner" style="background-image:url('images/profit.jpg')">
-          <div class="service-overlay">
-            <div class="service-icon">💰</div>
-            <h4>Profit & Loss</h4>
-            <p>Daily to yearly P&L reporting — from detail to the big picture.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-card reveal" style="--delay:0.3s">
-        <div class="service-card-inner" style="background-image:url('images/analysis.jpg')">
-          <div class="service-overlay">
-            <div class="service-icon">🔍</div>
-            <h4>Financial Analysis</h4>
-            <p>Deep business insights that surface opportunities and risks.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-card reveal" style="--delay:0.35s">
-        <div class="service-card-inner" style="background-image:url('images/cleanup.webp')">
-          <div class="service-overlay">
-            <div class="service-icon">🧹</div>
-            <h4>Data Cleanup</h4>
-            <p>Fix and structure messy financial data into reliable sources of truth.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- WHY US / VALUE PROPS -->
-<section class="why-us" id="why">
-  <div class="container">
-    <div class="why-split">
-      <div class="why-left reveal">
-        <span class="section-label">Why Fiducia</span>
-        <h2>We Don't Just Prepare Reports.<br /><em>We Build Strategy.</em></h2>
-        <p>Our approach combines strong accounting expertise with advanced tools — including AI-driven solutions — to deliver faster, smarter, and more innovative financial processes.</p>
-        <a href="#contact" class="btn btn-primary">Let's Work Together</a>
-      </div>
-      <div class="why-right">
-        <div class="why-card reveal" style="--delay:0s">
-          <div class="why-num">01</div>
-          <div>
-            <h4>Ecommerce Specialists</h4>
-            <p>We understand the financial rhythms of online business — from SKU-level P&L to platform-specific reporting.</p>
-          </div>
-        </div>
-        <div class="why-card reveal" style="--delay:0.1s">
-          <div class="why-num">02</div>
-          <div>
-            <h4>AI-Enhanced Processes</h4>
-            <p>We pair finance expertise with modern technology to deliver outputs that are faster, cleaner, and smarter.</p>
-          </div>
-        </div>
-        <div class="why-card reveal" style="--delay:0.2s">
-          <div class="why-num">03</div>
-          <div>
-            <h4>Clear, Actionable Outputs</h4>
-            <p>We transform complex financial data into simple, decision-ready insights your leadership can act on immediately.</p>
-          </div>
-        </div>
-        <div class="why-card reveal" style="--delay:0.3s">
-          <div class="why-num">04</div>
-          <div>
-            <h4>Dedicated Finance Team</h4>
-            <p>A real team of credentialed professionals, based in the Philippines, committed to your long-term success.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- TEAM -->
 <section class="team" id="team">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-label">The People Behind the Numbers</span>
-      <h2>Meet Our <em>Team</em></h2>
+    <div class="container">
+        <h3>Meet Our Team</h3>
+
+        <div class="team-grid">
+
+            <div class="team-member">
+                <img src="images/Rey.jpg">
+                <h4>Rey Joemar Nayve</h4>
+                <p>Finance Planning & Analysis Consultant</p>
+            </div>
+
+            <div class="team-member">
+                <img src="images/lovelyn2.jpg">
+                <h4>Lovelyn Rulete</h4>
+                <p>Finance Analyst</p>
+            </div>
+
+            <div class="team-member">
+                <img src="images/Zynor.jpg">
+                <h4>Zynor Jade Nayve</h4>
+                <p>Finance Assistant</p>
+            </div>
+
+            <div class="team-member">
+                <img src="images/Claire.jpg">
+                <h4>Kyle Claire Alcober</h4>
+                <p>Admin & Operations Manager</p>
+            </div>
+
+        </div>
     </div>
-
-    <div class="team-grid">
-
-      <div class="team-card reveal" style="--delay:0s">
-        <div class="team-photo-wrap">
-          <img src="images/Rey.jpg" alt="Rey Joemar Nayve" />
-          <div class="team-photo-overlay"></div>
-        </div>
-        <div class="team-info">
-          <h4>Rey Joemar Nayve</h4>
-          <p>Finance Planning & Analysis Consultant</p>
-        </div>
-      </div>
-
-      <div class="team-card reveal" style="--delay:0.1s">
-        <div class="team-photo-wrap">
-          <img src="images/lovelyn2.jpg" alt="Lovelyn Rulete" />
-          <div class="team-photo-overlay"></div>
-        </div>
-        <div class="team-info">
-          <h4>Lovelyn Rulete</h4>
-          <p>Finance Analyst</p>
-        </div>
-      </div>
-
-      <div class="team-card reveal" style="--delay:0.2s">
-        <div class="team-photo-wrap">
-          <img src="images/Zynor.jpg" alt="Zynor Jade Nayve" />
-          <div class="team-photo-overlay"></div>
-        </div>
-        <div class="team-info">
-          <h4>Zynor Jade Nayve</h4>
-          <p>Finance Assistant</p>
-        </div>
-      </div>
-
-      <div class="team-card reveal" style="--delay:0.3s">
-        <div class="team-photo-wrap">
-          <img src="images/Claire.jpg" alt="Kyle Claire Alcober" />
-          <div class="team-photo-overlay"></div>
-        </div>
-        <div class="team-info">
-          <h4>Kyle Claire Alcober</h4>
-          <p>Admin & Operations Manager</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ABOUT (CENTERED + REFINED) -->
 <section class="about" id="about">
-  <div class="container">
-    <div class="about-inner">
-      <div class="about-text reveal">
-        <span class="section-label">About Us</span>
-        <h2>Built on Trust.<br /><em>Driven by Clarity.</em></h2>
-        <p>
-          Fiducia Finance Group is a team of finance and accounting professionals based in Cebu, Philippines, dedicated to helping businesses achieve success through accurate, insightful, and modern financial solutions.
-        </p>
-        <p>
-          We specialize in financial reporting, performance insights, dashboard development, and financial templates designed to simplify complex data and support better decision-making. Our approach combines strong accounting expertise with advanced tools, including AI-driven solutions, to deliver faster, smarter, and more innovative financial processes.
-        </p>
-        <p>
-          We help ecommerce businesses focus on their operations while the Fiducia team handles their financial reporting and presentation with precision and clarity.
-        </p>
-        <blockquote class="about-quote">
-          "We don't just prepare reports — we transform financial data into clear strategies that drive growth, efficiency, and long-term success."
-        </blockquote>
-      </div>
-      <div class="about-visual reveal">
-        <div class="about-card-stack">
-          <div class="about-metric-card">
-            <div class="metric-label">Cash Flow Health</div>
-            <div class="metric-bar-wrap"><div class="metric-bar" style="--pct:82%"></div></div>
-            <div class="metric-val">82%</div>
-          </div>
-          <div class="about-metric-card">
-            <div class="metric-label">Revenue Growth</div>
-            <div class="metric-bar-wrap"><div class="metric-bar" style="--pct:67%"></div></div>
-            <div class="metric-val">67%</div>
-          </div>
-          <div class="about-metric-card">
-            <div class="metric-label">Expense Efficiency</div>
-            <div class="metric-bar-wrap"><div class="metric-bar" style="--pct:91%"></div></div>
-            <div class="metric-val">91%</div>
-          </div>
-          <div class="about-badge">
-            <span class="about-badge-icon">✦</span>
-            <span>Cebu, Philippines<br /><em>Serving Global Clients</em></span>
-          </div>
+    <div class="container">
+        <h3>About Fiducia Finance Group</h3>
+
+        <div class="about-content">
+
+            <p>
+                Fiducia Finance Group is a team of finance and accounting professionals based in Cebu, Philippines, dedicated to helping businesses achieve success through accurate, insightful, and modern financial solutions.
+            </p>
+                We specialize in financial reporting, performance insights, dashboard development, and financial templates designed to simplify complex data and support better decision-making.
+                Our approach combines strong accounting expertise with advanced tools, including AI-driven solutions, to deliver faster, smarter, and more innovative financial processes.
+            </p>
+                We help ecommerce businesses focus on their operations while the Fiducia team handles their financial reporting and presentation with precision and clarity.
+            <p class="highlight">
+                We don’t just prepare reports — we transform financial data into clear strategies that drive growth, efficiency, and long-term success.
+            </p>
+
         </div>
-      </div>
     </div>
-  </div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
-  <div class="container">
-    <div class="contact-inner">
-      <div class="contact-text reveal">
-        <span class="section-label">Get In Touch</span>
-        <h2>Let's Build Your Financial<br /><em>Clarity Together.</em></h2>
-        <p>Ready to take control of your financial data? Reach out and we'll get back to you within 24 hours.</p>
-        <div class="contact-links">
-          <a href="mailto:outsource.operationsteam@gmail.com?subject=Inquiry from Fiducia Website&body=Hello Fiducia Finance Group,%0D%0A%0D%0AI would like to inquire about your services.%0D%0A%0D%0AThank you." class="contact-link">
-            <span class="contact-link-icon">✉</span>
-            <div>
-              <strong>Email Us</strong>
-              <small>outsource.operationsteam@gmail.com</small>
-            </div>
-          </a>
-          <a href="https://wa.me/639623473350" target="_blank" class="contact-link">
-            <span class="contact-link-icon">💬</span>
-            <div>
-              <strong>WhatsApp</strong>
-              <small>Chat with our team directly</small>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="contact-form-wrap reveal">
-        <form class="contact-form" id="contact-form">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" placeholder="e.g. Juan dela Cruz" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="you@company.com" required />
-          </div>
-          <div class="form-group">
-            <label for="service">Service of Interest</label>
-            <select id="service">
-              <option value="">Select a service...</option>
-              <option>Financial Dashboards</option>
-              <option>3 Financial Statements</option>
-              <option>Financial Modeling</option>
-              <option>Budgeting & Forecasting</option>
-              <option>Cash Flow Reports</option>
-              <option>Profit & Loss</option>
-              <option>Financial Analysis</option>
-              <option>Data Cleanup</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" rows="4" placeholder="Tell us about your business and what you need..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">Send Message →</button>
-        </form>
-      </div>
+    <div class="container">
+        <h3>Work With Us</h3>
+        <p>Let’s build your financial clarity and business growth together.</p>
+
+        <a href="mailto:outsource.operationsteam@gmail.com?subject=Inquiry from Fiducia Website&body=Hello Fiducia Finance Group,%0D%0A%0D%0AI would like to inquire about your services.%0D%0A%0D%0AThank you." class="btn">
+            Email Us
+        </a>
+
+        <a href="https://wa.me/639623473350" target="_blank" class="btn">
+            Chat on WhatsApp
+        </a>
+
     </div>
-  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="container footer-inner">
-    <div class="footer-logo">
-      <span class="logo-icon">✦</span>
-      <span class="logo-text">Fiducia <em>Finance</em> Group</span>
-    </div>
-    <p class="footer-tagline">Trust &amp; Confidence — Cebu, Philippines</p>
-    <p class="footer-copy">© 2026 Fiducia Finance Group. All rights reserved.</p>
-  </div>
+    <p>© 2026 Fiducia Finance Group – Trust & Confidence</p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
