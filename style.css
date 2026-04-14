@@ -41,7 +41,7 @@ header {
     align-items: center;
 }
 
-/* BRAND (FIXED LOGO ALIGNMENT) */
+/* BRAND */
 .brand {
     display: flex;
     align-items: center;
@@ -52,14 +52,12 @@ header {
     width: 32px;
     height: 32px;
     object-fit: contain;
-    display: block;
     flex-shrink: 0;
 }
 
 .brand h1 {
     font-size: 18px;
     color: #1f3d2b;
-    margin: 0;
     line-height: 1;
 }
 
@@ -100,6 +98,7 @@ header nav a:hover {
     color: #4a5a50;
 }
 
+/* BUTTON */
 .btn {
     display: inline-block;
     margin-top: 20px;
@@ -124,9 +123,8 @@ section {
 }
 
 /* =========================
-   SERVICES (FINTECH DARK GREEN)
+   SERVICES
 ========================= */
-
 .services {
     background: linear-gradient(135deg, #0b2e1a, #0f3d22, #14532d);
     text-align: center;
@@ -137,7 +135,6 @@ section {
     color: rgba(255, 255, 255, 0.75);
 }
 
-/* GRID */
 .service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -145,7 +142,6 @@ section {
     margin-top: 45px;
 }
 
-/* CARD */
 .service-card {
     height: 260px;
     border-radius: 14px;
@@ -153,8 +149,7 @@ section {
     background-position: center;
     position: relative;
     overflow: hidden;
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.3s ease;
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
@@ -163,41 +158,42 @@ section {
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
 }
 
-/* OVERLAY */
 .overlay {
     position: absolute;
     bottom: 0;
     width: 100%;
     padding: 15px;
-
     background: linear-gradient(
         to top,
         rgba(0, 0, 0, 0.85),
         rgba(0, 0, 0, 0.25),
         transparent
     );
-
     color: white;
 }
 
-.overlay h4 {
-    font-size: 1.05rem;
-    margin-bottom: 5px;
-}
-
-.overlay p {
-    font-size: 0.9rem;
-    opacity: 0.9;
-}
-
 /* =========================
-   TEAM
+   TEAM (FIXED SPACING ISSUE)
 ========================= */
 .team {
     background: #f3f8f4;
     text-align: center;
 }
 
+/* TITLE */
+.team h3 {
+    margin-bottom: 15px;
+}
+
+/* INTRO TEXT (THIS IS THE KEY FIX) */
+.team-intro {
+    max-width: 800px;
+    margin: 0 auto 80px auto; /* 🔥 BIG SPACE BEFORE IMAGES */
+    color: #4a5a50;
+    line-height: 1.7;
+}
+
+/* GRID */
 .team-grid {
     display: flex;
     justify-content: center;
@@ -205,6 +201,7 @@ section {
     gap: 20px;
 }
 
+/* CARD */
 .team-member {
     background: white;
     padding: 18px;
@@ -223,6 +220,7 @@ section {
     height: 110px;
     border-radius: 50%;
     object-fit: cover;
+    margin-bottom: 10px;
 }
 
 /* =========================
@@ -279,7 +277,7 @@ footer {
 }
 
 /* =========================
-   NAV ACTIVE STATE
+   NAV ACTIVE
 ========================= */
 nav a.active {
     color: #2e7d32;
