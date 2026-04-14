@@ -103,9 +103,8 @@ section {
     color: #ffffff;
 }
 
-.subtext {
-    color: #6b7c72;
-    margin-top: 10px;
+.services .subtext {
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .service-grid {
