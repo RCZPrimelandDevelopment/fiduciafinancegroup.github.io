@@ -197,3 +197,21 @@ nav a.active {
 h1, h2, h3, h4, p {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
+/* ABOUT */
+.about {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #050b18, #0a2540);
+    text-align: center;
+}
+
+.about h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 15px auto;
+    line-height: 1.6;
+    opacity: 0.9;
+}
