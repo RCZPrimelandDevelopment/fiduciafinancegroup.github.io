@@ -1,70 +1,115 @@
-// =========================
-// SMOOTH SCROLL NAVIGATION
-// =========================
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function (e) {
-        const targetId = this.getAttribute('href');
+/* =============================================
+   FIDUCIA FINANCE GROUP — script.js
+   ============================================= */
 
-        // only apply smooth scroll for same-page links
-        if (targetId.startsWith("#")) {
-            e.preventDefault();
-            const target = document.querySelector(targetId);
-
-            if (target) {
-                target.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-            }
-        }
-    });
+// ── HEADER SCROLL EFFECT ──────────────────────
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
 });
 
+// ── HAMBURGER MENU ────────────────────────────
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
 
-// =========================
-// FADE-IN ANIMATION ON SCROLL
-// =========================
-const elements = document.querySelectorAll('.service-card, .team-member, .hero h2, .hero p');
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+// Close mobile menu on link click
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+});
+
+// ── REVEAL ON SCROLL ─────────────────────────
+const reveals = document.querySelectorAll('.reveal');
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
-}, {
-    threshold: 0.2
-});
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-elements.forEach(el => {
-    el.classList.add('hidden');
-    observer.observe(el);
-});
+reveals.forEach(el => observer.observe(el));
 
+// ── COUNTER ANIMATION ─────────────────────────
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target, 10);
+  const duration = 1600;
+  const step = target / (duration / 16);
+  let current = 0;
 
-// =========================
-// ACTIVE NAV HIGHLIGHT (OPTIONAL)
-// =========================
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav a");
+  const tick = () => {
+    current = Math.min(current + step, target);
+    el.textContent = Math.round(current);
+    if (current < target) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
 
-window.addEventListener("scroll", () => {
-    let current = "";
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounter(entry.target);
+      counterObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
+document.querySelectorAll('.stat-num').forEach(el => counterObserver.observe(el));
 
-        if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
-            current = section.getAttribute("id");
-        }
-    });
+// ── METRIC BAR ANIMATION ──────────────────────
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animated');
+      barObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.4 });
 
-    navLinks.forEach(link => {
-        link.classList.remove("active");
+document.querySelectorAll('.metric-bar').forEach(el => barObserver.observe(el));
 
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-        }
-    });
-});
+// ── CONTACT FORM ──────────────────────────────
+const contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name    = document.getElementById('name').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email) {
+      alert('Please fill in your name and email.');
+      return;
+    }
+
+    const subject = `Inquiry from Fiducia Website${service ? ' — ' + service : ''}`;
+    const body    = `Hello Fiducia Finance Group,\n\nName: ${name}\nEmail: ${email}\nService: ${service || 'Not specified'}\n\n${message}\n\nThank you.`;
+
+    window.location.href = `mailto:outsource.operationsteam@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+}
+
+// ── SMOOTH ACTIVE NAV ─────────────────────────
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.classList.toggle('active',
+          link.getAttribute('href') === '#' + entry.target.id);
+      });
+    }
+  });
+}, { threshold: 0.4 });
+
+sections.forEach(section => navObserver.observe(section));
